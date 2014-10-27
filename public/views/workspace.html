@@ -30,7 +30,7 @@
             <ul class="nav nav-sidebar">
               <li data-ng-class="navClass('workspace/overview')"><a data-ui-sref="workspace.overview">Overview</a></li>
               <li data-ng-class="navClass('workspace/overduetasks')"><a data-ui-sref="workspace.overduetasks" ng-click="get_overdue_tasks()">Overdue Tasks</a></li>
-              <li><a href="#">Connect Yammer</a></li>
+              <li data-ng-class="navClass('workspace/connectyammer')"><a data-ui-sref="workspace.connectyammer">Connect Yammer</a></li>
             </ul>
           </div>
           <div data-ui-view></div>

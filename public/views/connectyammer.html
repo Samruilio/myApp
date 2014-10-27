@@ -1,0 +1,21 @@
+<script type="text/ng-template" id="myModalContent.html">
+  <div class="modal-header">
+      <h3 class="modal-title">Passport to Yammer</h3>
+  </div>
+  <div class="modal-body">
+      <div class="form-group">
+          <label>Yammer Client ID:</label>
+          <input placeholder="eg. 2pf15vNjipuUwtwCp5rg" type="text" class="form-control" ng-model="client_id">
+      </div>
+  </div>
+  <div class="modal-footer">
+      <button class="btn btn-primary" ng-click="connect(client_id)">Connet</button>
+  </div>
+</script>
+
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+  <!-- href="https://www.yammer.com/dialog/oauth?client_id=2pf15vNjipuUwtwCp5rg&redirect_uri=http://54.66.203.49/auth" -->
+  <a href="" data-ng-click="getYammerId()">
+    <img src="https://affinitylivecdn.commondatastorage.googleapis.com/6.4.45/images/integrations/yammer_large.png">
+  </a>
+</div>

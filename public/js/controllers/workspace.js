@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('mean.system').controller('WorkSpaceController', ['$scope', '$state', '$http', '$location', '$stateParams', '$cookieStore', 
-    function ($scope, $state, $http, $location, $stateParams, $cookieStore) {
+    '$modal', '$window', 
+    function ($scope, $state, $http, $location, $stateParams, $cookieStore, $modal, $window) {
         $scope.login_info = $cookieStore.get('login_info');
 
         $scope.get_overdue_tasks = function(){
@@ -52,6 +53,23 @@ angular.module('mean.system').controller('WorkSpaceController', ['$scope', '$sta
                     alert('The resources requested do not exist!');
             });
         };
+
+        $scope.connectYammer = function () {
+        };
+
+        $scope.getYammerId = function () {
+            var modalInstance = $modal.open({
+                templateUrl: 'myModalContent.html',
+                controller: 'ModalInstanceCtrl'
+            });
+
+            modalInstance.result.then(function (client_id) {
+                $scope.yammers = {yammer_id: client_id};
+                //$window.open('https://www.yammer.com/dialog/oauth?client_id='+client_id+'&redirect_uri=http://54.66.203.49/auth', '', 'width=600,height=480');
+                $window.open('https://www.yammer.com/dialog/oauth?client_id='+client_id+'&redirect_uri=http://54.66.203.49/auth');
+            }, function () {
+            });
+        }
 }]);
 
 angular.module('mean.system').filter('stateTotext', 
@@ -61,3 +79,11 @@ angular.module('mean.system').filter('stateTotext',
         };
     }
 );
+
+angular.module('mean.system').controller('ModalInstanceCtrl', function ($scope, $modalInstance) {
+    $scope.connect = function (client_id) {
+        if (client_id !== null) {
+            $modalInstance.close(client_id);
+        };
+    };
+});

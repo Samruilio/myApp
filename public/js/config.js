@@ -19,6 +19,9 @@ angular.module('mean').config(['$stateProvider', '$urlRouterProvider',
     }).state('workspace.overduetasks', {
       url: '/overduetasks',
       templateUrl: 'views/overduetasks.html'
+    }).state('workspace.connectyammer', {
+      url: '/connectyammer',
+      templateUrl: 'views/connectyammer.html'
     });
 }
 ]);
