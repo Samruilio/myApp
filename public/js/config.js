@@ -13,6 +13,9 @@ angular.module('mean').config(['$stateProvider', '$urlRouterProvider',
     }).state('workspace', {
       url: '/workspace',
       templateUrl: 'views/workspace.html'
+    }).state('workspace.overview', {
+      url: '/overview',
+      templateUrl: 'views/overview.html'
     }).state('workspace.overduetasks', {
       url: '/overduetasks',
       templateUrl: 'views/overduetasks.html'

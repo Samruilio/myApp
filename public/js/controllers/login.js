@@ -11,7 +11,7 @@ angular.module('mean.system').controller('LoginController', ['$scope', '$state',
     		  success(function(data/*, status, headers, config**/) {
     		  	if (data !== 'error:400') {
     		  		$cookieStore.put('login_info', data);
-    		  		$state.go('workspace');
+    		  		$state.go('workspace.overview');
     		  	}else{
     		  		alert('Can not find this account!');
     		  	}

@@ -36,7 +36,8 @@
         "view-helpers": "latest",
         "forever": "latest",
         "grunt": "latest",
-        "grunt-cli": "latest"
+        "grunt-cli": "latest",
+        "time-grunt": "latest"
     },
     "devDependencies": {
         "supertest": "latest",

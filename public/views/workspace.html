@@ -28,22 +28,9 @@
         <div class="row">
           <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-              <li data-ng-class="navClass('workspace')"><a data-ui-sref="workspace">Overview</a></li>
+              <li data-ng-class="navClass('workspace/overview')"><a data-ui-sref="workspace.overview">Overview</a></li>
               <li data-ng-class="navClass('workspace/overduetasks')"><a data-ui-sref="workspace.overduetasks" ng-click="get_overdue_tasks()">Overdue Tasks</a></li>
-              <li><a href="#">Analytics</a></li>
-              <li><a href="#">Export</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-              <li><a href="">Nav item</a></li>
-              <li><a href="">Nav item again</a></li>
-              <li><a href="">One more nav</a></li>
-              <li><a href="">Another nav item</a></li>
-              <li><a href="">More navigation</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-              <li><a href="">Nav item again</a></li>
-              <li><a href="">One more nav</a></li>
-              <li><a href="">Another nav item</a></li>
+              <li><a href="#">Connect Yammer</a></li>
             </ul>
           </div>
           <div data-ui-view></div>
