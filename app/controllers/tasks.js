@@ -7,6 +7,7 @@ var request = require('request');
 var qs = require('querystring');
 
 exports.send = function(req, res) {
+	console.log('code is'+req.query.code);
 	if (req.query.code !== null) {
 		res.send(req.query.code);
 	}else{
