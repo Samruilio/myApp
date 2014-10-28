@@ -7,34 +7,29 @@ var request = require('request');
 var qs = require('querystring');
 
 exports.send = function(req, res) {
-	console.log('code is'+req.query.code);
-	if (req.query.code !== null) {
-		res.send(req.query.code);
-	}else{
-		var timestamp = Math.round(new Date().getTime() / 1000);
-		var querystring = {
-			_fields: 'date_created, date_due, date_completed, status, assignee(email)', 
-			_filters: 'date_due_before('+timestamp+'), status(4,6)', 
-		    _bearer_token: req.query.access_token
-		};
-		querystring = qs.stringify(querystring);
-		request({
-		    method: 'GET',
-		    headers: {
-		        'Content-length': querystring.length,
-		        'Content-type': 'application/x-www-form-urlencoded'
-		    },
-		    uri: 'https://demo.api.staging.affinitylive.com/api/v0/tasks.json',
-		    body: querystring
-		}, function(error, response, body){
-		    if(response.statusCode === 200){
-		        var content = JSON.parse(body);
-		        res.send(content.response);
-		    }else{
-		    	res.send('error:'+response.statusCode);
-		    }
-		});
+	var timestamp = Math.round(new Date().getTime() / 1000);
+	var querystring = {
+		_fields: 'date_created, date_due, date_completed, status, assignee(email)', 
+		_filters: 'date_due_before('+timestamp+'), status(4,6)', 
+	    _bearer_token: req.query.access_token
 	};
+	querystring = qs.stringify(querystring);
+	request({
+	    method: 'GET',
+	    headers: {
+	        'Content-length': querystring.length,
+	        'Content-type': 'application/x-www-form-urlencoded'
+	    },
+	    uri: 'https://demo.api.staging.affinitylive.com/api/v0/tasks.json',
+	    body: querystring
+	}, function(error, response, body){
+	    if(response.statusCode === 200){
+	        var content = JSON.parse(body);
+	        res.send(content.response);
+	    }else{
+	    	res.send('error:'+response.statusCode);
+	    }
+	});
 };
 
 exports.update = function(req, res) {

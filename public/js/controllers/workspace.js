@@ -64,12 +64,11 @@ angular.module('mean.system').controller('WorkSpaceController', ['$scope', '$sta
             });
 
             modalInstance.result.then(function (client_id) {
-                $scope.yammers = {yammer_id: client_id};
-                //$window.open('https://www.yammer.com/dialog/oauth?client_id='+client_id+'&redirect_uri=http://54.66.203.49/auth', '', 'width=600,height=480');
-                $window.open('https://www.yammer.com/dialog/oauth?client_id='+client_id+'&redirect_uri=http://54.66.203.49/auth');
+                $cookieStore.put('client_id', {'client_id': client_id});
+                $window.open('https://www.yammer.com/dialog/oauth?client_id='+client_id+'&redirect_uri=http://localhost:8080/auth', '', 'width=600,height=480');
             }, function () {
             });
-        }
+        };
 }]);
 
 angular.module('mean.system').filter('stateTotext', 
@@ -84,6 +83,6 @@ angular.module('mean.system').controller('ModalInstanceCtrl', function ($scope, 
     $scope.connect = function (client_id) {
         if (client_id !== null) {
             $modalInstance.close(client_id);
-        };
+        }
     };
 });
