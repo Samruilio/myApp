@@ -6,6 +6,8 @@ angular.module('mean').config(['$stateProvider', '$urlRouterProvider',
     // For unmatched routes:
     $urlRouterProvider.otherwise('/');
 
+    console.log($stateProvider.state);
+
     // states for my app
     $stateProvider.state('login', {
       url: '/',

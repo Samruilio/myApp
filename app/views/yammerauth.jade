@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    script(type='text/javascript', data-app-id='2pf15vNjipuUwtwCp5rg', src='https://assets.yammer.com/assets/platform_js_sdk.js')
+    title Hello
+  body
+    script.
+      yam.connect.loginButton('#yammer-login', function (resp) {
+      if (resp.authResponse) {
+      console.log('pass');
+      }
+      else {
+      console.log('fail');
+      }
+      });
+    span#yammer-login
