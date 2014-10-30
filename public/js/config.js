@@ -24,9 +24,6 @@ angular.module('mean').config(['$stateProvider', '$urlRouterProvider',
     }).state('workspace.connectyammer', {
       url: '/connectyammer',
       templateUrl: 'views/connectyammer.html'
-    }).state('workspace.ballpool', {
-      url: '/ballpool',
-      templateUrl: 'views/Ball Pool.html'
     });
 }
 ]);
