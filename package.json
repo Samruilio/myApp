@@ -1,53 +1,53 @@
 {
-    "name": "testo",
-    "description": "NOOB",
-    "version": "0.0.1",
-    "private": false,
-    "author": "SAM",
-    "repository": {
-        "type": "git",
-        "url": "https://mighty-everglades-2723.herokuapp.com/git@heroku.com:mighty-everglades-2723.git"
-    },
-    "engines": {
-        "node": "0.10.x",
-        "npm": "1.2.x"
-    },
-    "scripts": {
-        "start": "node node_modules/grunt-cli/bin/grunt",
-        "test": "node node_modules/grunt-cli/bin/grunt test"
-    },
-    "dependencies": {
-        "express": "latest",
-        "morgan": "latest",
-        "cookie-parser": "latest",
-        "serve-static": "latest",
-        "body-parser": "latest",
-        "compression": "latest",
-        "method-override": "latest",
-        "express-session": "latest",
-        "static-favicon": "latest",
-        "consolidate": "latest",
-        "jade": "latest",
-        "mongoose": "latest",
-        "connect-mongo": "latest",
-        "connect-flash": "latest",
-        "underscore": "latest",
-        "async": "latest",
-        "view-helpers": "latest",
-        "forever": "latest",
-        "grunt": "latest",
-        "grunt-cli": "latest",
-        "time-grunt": "latest"
-    },
-    "devDependencies": {
-        "supertest": "latest",
-        "should": "latest",
-        
-        "grunt-contrib-watch": "latest",
-        "grunt-contrib-jshint": "latest",
-        "grunt-nodemon": "latest",
-        "grunt-concurrent": "latest",
-        "grunt-mocha-test": "latest",
-        "load-grunt-tasks": "~0.1.0"
-    }
+  "name": "testo",
+  "description": "NOOB",
+  "version": "0.0.1",
+  "private": false,
+  "author": "SAM",
+  "repository": {
+    "type": "git",
+    "url": "https://mighty-everglades-2723.herokuapp.com/git@heroku.com:mighty-everglades-2723.git"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+  "scripts": {
+    "start": "node node_modules/grunt-cli/bin/grunt",
+    "test": "node node_modules/grunt-cli/bin/grunt test"
+  },
+  "dependencies": {
+    "async": "latest",
+    "body-parser": "latest",
+    "compression": "latest",
+    "connect-flash": "latest",
+    "connect-mongo": "latest",
+    "consolidate": "latest",
+    "cookie-parser": "latest",
+    "express": "latest",
+    "express-session": "latest",
+    "forever": "latest",
+    "grunt": "latest",
+    "grunt-cli": "latest",
+    "jade": "latest",
+    "method-override": "latest",
+    "mongoose": "latest",
+    "morgan": "latest",
+    "serve-static": "latest",
+    "socket.io": "^1.2.0",
+    "static-favicon": "latest",
+    "time-grunt": "latest",
+    "underscore": "latest",
+    "view-helpers": "latest"
+  },
+  "devDependencies": {
+    "supertest": "latest",
+    "should": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-nodemon": "latest",
+    "grunt-concurrent": "latest",
+    "grunt-mocha-test": "latest",
+    "load-grunt-tasks": "~0.1.0"
+  }
 }

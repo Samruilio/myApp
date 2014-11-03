@@ -6,8 +6,6 @@ angular.module('mean').config(['$stateProvider', '$urlRouterProvider',
     // For unmatched routes:
     $urlRouterProvider.otherwise('/');
 
-    console.log($stateProvider.state);
-
     // states for my app
     $stateProvider.state('login', {
       url: '/',
@@ -24,6 +22,9 @@ angular.module('mean').config(['$stateProvider', '$urlRouterProvider',
     }).state('workspace.connectyammer', {
       url: '/connectyammer',
       templateUrl: 'views/connectyammer.html'
+    }).state('workspace.chatty', {
+      url: '/chatty',
+      templateUrl: 'views/chatty.html'
     });
 }
 ]);
